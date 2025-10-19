@@ -7,8 +7,11 @@ import cv2
 from PIL import Image
 import time
 import threading
-import io
-import pyttsx3
+from gtts import gTTS
+import streamlit as st
+import tempfile
+import threading
+import os
 from collections import deque, Counter
 from typing import List, Tuple, Dict
 import matplotlib.pyplot as plt
@@ -300,32 +303,28 @@ def draw_keypoints_and_skeleton_rgb(image_rgb: np.ndarray, keypoints: np.ndarray
 # ---------------------------
 # Audio system (server-side)
 # ---------------------------
+
 class AudioFeedbackSystem:
-    def __init__(self, rate=150, volume=0.9):
-        self.engine = None
+    def __init__(self, lang='en'):
+        self.lang = lang
         self.is_speaking = False
         self.lock = threading.Lock()
-        try:
-            self.engine = pyttsx3.init()
-            self.engine.setProperty('rate', rate)
-            self.engine.setProperty('volume', volume)
-        except Exception as e:
-            print("Could not initialize TTS engine:", e)
-            self.engine = None
 
     def speak(self, message: str):
-        if not self.engine:
-            return
         def _speak():
-            with self.lock:
-                self.is_speaking = True
-                try:
-                    self.engine.say(message)
-                    self.engine.runAndWait()
-                except Exception as e:
-                    print("TTS error:", e)
-                finally:
-                    self.is_speaking = False
+            try:
+                with self.lock:
+                    self.is_speaking = True
+                    tts = gTTS(text=message, lang=self.lang)
+                    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+                        tts.save(tmp.name)
+                        st.audio(tmp.name, format="audio/mp3", autoplay=True)
+                        os.remove(tmp.name)
+            except Exception as e:
+                st.error(f"TTS error: {e}")
+            finally:
+                self.is_speaking = False
+
         t = threading.Thread(target=_speak, daemon=True)
         t.start()
 
