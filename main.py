@@ -1,4 +1,4 @@
-# app.py (HYBRID-enabled)
+# app.py - PosePerfect (Hybrid camera + MoveNet + Browser audio via gTTS)
 import streamlit as st
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -6,8 +6,6 @@ import numpy as np
 import cv2
 from PIL import Image
 import time
-import threading
-from gtts import gTTS
 import tempfile
 import os
 from collections import deque, Counter
@@ -15,6 +13,7 @@ from typing import List, Tuple, Dict
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, classification_report, f1_score, accuracy_score
 from sklearn.metrics import ConfusionMatrixDisplay
+from gtts import gTTS
 
 # ---------------------------
 # Constants & Config
@@ -93,16 +92,13 @@ def detect_pose_single(movenet, image_rgb, input_size):
                 keypoints = outputs[k].numpy()
                 break
         if keypoints is None:
-            # try first value
             keypoints = list(outputs.values())[0].numpy()
     else:
         keypoints = outputs.numpy()
 
     keypoints = np.squeeze(keypoints)
-    # expected (1,1,17,3) -> squeeze -> (17,3) or already (17,3)
     if keypoints.shape == (17, 3):
         return keypoints.astype(float)
-    # attempt reshape if size matches
     if keypoints.size == 17*3:
         return keypoints.reshape((17,3)).astype(float)
     raise RuntimeError(f"Unexpected keypoints shape returned by MoveNet: {keypoints.shape}")
@@ -281,57 +277,26 @@ def draw_keypoints_and_skeleton_rgb(image_rgb: np.ndarray, keypoints: np.ndarray
     return cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
 
 # ---------------------------
-# Audio system (server-side)
+# Browser-playable speech helper (synchronous)
 # ---------------------------
-class AudioFeedbackSystem:
-    def __init__(self, lang='en'):
-        self.lang = lang
-        self.is_speaking = False
-        self.lock = threading.Lock()
-
-    def speak(self, message: str):
-        def _speak():
-            try:
-                with self.lock:
-                    self.is_speaking = True
-                    tts = gTTS(text=message, lang=self.lang)
-                    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
-                        tmpname = tmp.name
-                    tts.save(tmpname)
-                    # try to play via Streamlit (may warn if called in background thread)
-                    try:
-                        st.audio(tmpname, format="audio/mp3", autoplay=True)
-                    except Exception as e:
-                        print("st.audio in bg thread may fail:", e)
-                    finally:
-                        try:
-                            os.remove(tmpname)
-                        except Exception:
-                            pass
-            except Exception as e:
-                st.error(f"TTS error: {e}")
-            finally:
-                self.is_speaking = False
-        t = threading.Thread(target=_speak, daemon=True)
-        t.start()
-
-# Optional offline pyttsx3 implementation (uncomment to use, requires pyttsx3 installed)
-import pyttsx3
-class AudioFeedbackSystemOffline:
-    def __init__(self, lang='en'):
-        self.engine = pyttsx3.init()
-        self.lock = threading.Lock()
-    def speak(self, message):
-        def _s():
-            with self.lock:
-                self.engine.say(message)
-                self.engine.runAndWait()
-        threading.Thread(target=_s, daemon=True).start()
-
-
-@st.cache_resource
-def get_audio_system():
-    return AudioFeedbackSystem()
+def speak_text_browser(message: str):
+    """Create mp3 via gTTS and stream to browser with st.audio (synchronous)."""
+    try:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as tmp:
+            tmpname = tmp.name
+        tts = gTTS(text=message, lang="en")
+        tts.save(tmpname)
+        with open(tmpname, "rb") as f:
+            audio_bytes = f.read()
+        # present audio player in UI (autoplay requests depend on browser/user gesture)
+        st.audio(audio_bytes, format="audio/mp3", autoplay=True)
+    except Exception as e:
+        st.warning(f"Audio error: {e}")
+    finally:
+        try:
+            os.remove(tmpname)
+        except Exception:
+            pass
 
 # ---------------------------
 # Temporal smoothing classes
@@ -376,11 +341,9 @@ class FeedbackSmoother:
         if len(self.history) < max(3, self.window_size//3):
             return []
         counts = Counter()
-        example_map = {}
         for msgs in self.history:
             for key in msgs:
                 counts[key] += 1
-                example_map[key] = key
         threshold = int(len(self.history) * self.persistence_ratio)
         stable = []
         for key, cnt in counts.items():
@@ -403,32 +366,25 @@ class FeedbackSmoother:
 # ---------------------------
 # Streamlit UI & main app
 # ---------------------------
-st.set_page_config(page_title="PosePerfect - Form Correction", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="PosePerfect - Hybrid", layout="wide", initial_sidebar_state="expanded")
 
 # Header CSS
 st.markdown("""
 <style>
-    .main-header {
-        text-align: center;
-        padding: 1rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        color: white;
-    }
-    .exercise-label { font-size: 1.6rem; font-weight: 700; color:#2b6cb0; text-align:center }
-    .feedback-error { background: #fee; border-left: 4px solid #f44; padding:0.6rem; border-radius:6px; margin:0.4rem 0;}
+    .main-header { text-align:center; padding:1rem; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:10px; color:white; margin-bottom:1rem;}
+    .exercise-label { font-size:1.4rem; font-weight:700; color:#2b6cb0; text-align:center }
+    .feedback-error { background:#fee; border-left:4px solid #f44; padding:0.6rem; border-radius:6px; margin:0.4rem 0;}
     .feedback-warning { background:#fff4e5; border-left:4px solid #f59e0b; padding:0.6rem; border-radius:6px; margin:0.4rem 0;}
     .feedback-success { background:#ecfdf5; border-left:4px solid #10b981; padding:0.6rem; border-radius:6px; margin:0.4rem 0;}
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="main-header"><h1>🏋️ PosePerfect — Real-time Form Evaluation</h1><p>MSU-IIT × Kyushu Sangyo University — COIL 2025</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>🏋️ PosePerfect — Hybrid Pose Detection</h1><p>MoveNet Lightning & Thunder — Browser audio feedback (gTTS)</p></div>', unsafe_allow_html=True)
 
-# Sidebar configuration (including hybrid camera options)
+# Sidebar
 st.sidebar.header("Settings")
-model_choice = st.sidebar.selectbox("MoveNet Model", options=["Thunder", "Lightning"], index=0)
-input_size = 256 if model_choice == "Thunder" else 192
+model_choice = st.sidebar.selectbox("MoveNet Model", options=["Lightning", "Thunder"], index=0)
+input_size = 192 if model_choice == "Lightning" else 256
 st.sidebar.markdown(f"**Model:** MoveNet {model_choice} ({input_size}x{input_size})")
 
 min_kp_conf = st.sidebar.slider("Keypoint Confidence Threshold", 0.1, 0.9, 0.3, 0.05)
@@ -436,42 +392,30 @@ smoothing_window = st.sidebar.slider("Temporal Smoothing Window", 5, 30, 15)
 smoothing_conf_thresh = st.sidebar.slider("Smoothing Confidence Threshold", 0.3, 0.95, 0.6, 0.05)
 min_time_between_changes = st.sidebar.slider("Min time between exercise changes (s)", 0.5, 3.0, 1.0, 0.1)
 
-# Hybrid camera options
 st.sidebar.markdown("---")
 st.sidebar.header("Camera / Capture")
-use_local_cam = st.sidebar.checkbox("Use local webcam (for development)", value=False)
+use_local_cam = st.sidebar.checkbox("Use local webcam (development)", value=False)
 auto_refresh = st.sidebar.checkbox("Auto-refresh browser camera (pseudo-live)", value=True)
-refresh_interval = st.sidebar.slider("Refresh interval (s) — browser camera", 1, 8, 3)
-
-enable_audio = st.sidebar.checkbox("Enable Server TTS (gTTS)", value=False)
-audio_cooldown = st.sidebar.slider("Audio Cooldown (s)", 2.0, 10.0, 5.0, 1.0)
+refresh_interval = st.sidebar.slider("Browser refresh interval (s)", 1, 8, 3)
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Recording & Metrics")
-enable_labeling = st.sidebar.checkbox("Enable live labeling (press button to set true label)", value=True)
+st.sidebar.header("Audio & Logging")
+enable_audio = st.sidebar.checkbox("Enable browser TTS (gTTS)", value=True)
+audio_cooldown = st.sidebar.slider("Audio cooldown (s)", 2.0, 10.0, 5.0, 1.0)
+
+st.sidebar.markdown("---")
+st.sidebar.header("Metrics & Labeling")
+enable_labeling = st.sidebar.checkbox("Enable live labeling (press button)", value=True)
 auto_log_pred = st.sidebar.checkbox("Auto-log predictions for metrics", value=True)
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("Instructions")
-st.sidebar.markdown("""
-**Camera placement**
-- Place camera ~2–4 meters away, chest height (or slightly lower).
-- Side view is best for squats and lunges; slightly angled top-down helps pushups.
-- Ensure full body is visible (head to ankles).
-""")
+st.sidebar.markdown("⚠️ Note: gTTS requires internet to generate audio. Browser autoplay policies may require a user gesture (click) before audio plays.")
 
-st.sidebar.markdown("⚠️ Note: Server TTS plays on the machine running the app. If hosting remotely, enable only if you want audio on that host.")
-
-# Load model
+# Load model (spinner)
 with st.spinner("Loading MoveNet model..."):
     movenet = load_movenet_model(model_choice)
 
-audio_system = get_audio_system() if enable_audio else None
-
-# Main tabs
-tab_live, tab_image, tab_metrics = st.tabs(["📹 Live Detection", "📸 Image Analysis", "📊 Metrics & Evaluation"])
-
-# Session state defaults
+# session state
 if 'running' not in st.session_state:
     st.session_state.running = False
 if 'y_true' not in st.session_state:
@@ -486,8 +430,6 @@ if 'smoother' not in st.session_state:
     st.session_state.smoother = TemporalSmoother(window_size=smoothing_window, confidence_threshold=smoothing_conf_thresh, min_change_interval=min_time_between_changes)
 if 'fb_smoother' not in st.session_state:
     st.session_state.fb_smoother = FeedbackSmoother(window_size=10, persistence_ratio=0.5, audio_cooldown=audio_cooldown)
-if 'last_refresh' not in st.session_state:
-    st.session_state.last_refresh = 0.0
 
 # update smoother params
 st.session_state.smoother.window_size = smoothing_window
@@ -495,11 +437,14 @@ st.session_state.smoother.confidence_threshold = smoothing_conf_thresh
 st.session_state.smoother.min_change_interval = min_time_between_changes
 st.session_state.fb_smoother.audio_cooldown = audio_cooldown
 
+# Tabs
+tab_live, tab_image, tab_metrics = st.tabs(["📹 Live Detection", "📸 Image Analysis", "📊 Metrics & Evaluation"])
+
 # ---------------------------
-# Live Detection Tab (hybrid)
+# Live Detection Tab (Hybrid)
 # ---------------------------
 with tab_live:
-    st.subheader("Real-time Form Detection (Hybrid Mode)")
+    st.subheader("Real-time Form Detection (Hybrid)")
     col1, col2 = st.columns([3,1])
     with col1:
         video_placeholder = st.empty()
@@ -543,7 +488,7 @@ with tab_live:
             st.session_state.rep_count = 0
             st.success("Cleared logged labels & predictions")
 
-    # If using local webcam -> run near-real-time OpenCV loop
+    # LOCAL WEBCAM LOOP
     if use_local_cam:
         if st.session_state.running:
             status_text.info("Starting local webcam...")
@@ -567,7 +512,6 @@ with tab_live:
                         frame_bgr = cv2.flip(frame_bgr, 1)
                         frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
 
-                        # Pose detection and pipeline
                         keypoints = detect_pose_single(movenet, frame_rgb, input_size)
                         features = extract_features(keypoints, min_kp_conf)
                         raw_ex, raw_conf = recognize_exercise(keypoints, features, min_kp_conf)
@@ -577,10 +521,11 @@ with tab_live:
                             raw_feedback = detect_form_errors(stable_ex, keypoints, features)
                         stable_feedback = st.session_state.fb_smoother.update(raw_feedback)
 
-                        if enable_audio and audio_system and stable_feedback:
+                        # play browser audio (sync): requires user gesture to allow autoplay
+                        if enable_audio and stable_feedback:
                             for fb in stable_feedback:
-                                if fb['severity'] == 'error' and st.session_state.fb_smoother.should_speak(fb['metric']):
-                                    audio_system.speak(fb['message'])
+                                if fb['severity']=='error' and st.session_state.fb_smoother.should_speak(fb['metric']):
+                                    speak_text_browser(fb['message'])
 
                         annotated = draw_keypoints_and_skeleton_rgb(frame_rgb, keypoints, confidence_threshold=min_kp_conf)
                         overlay = annotated.copy()
@@ -590,8 +535,8 @@ with tab_live:
 
                         now = time.time()
                         dt = now - prev_time if (now - prev_time) > 1e-6 else 1e-6
-                        fps = 1.0 / dt
                         prev_time = now
+                        fps = 1.0 / dt
                         fps_deque.append(fps)
                         avg_fps = np.mean(fps_deque)
 
@@ -603,7 +548,7 @@ with tab_live:
                         if stable_feedback:
                             html = ""
                             for fb in stable_feedback:
-                                cls = "feedback-error" if fb['severity']=="error" else ("feedback-warning" if fb['severity']=="warning" else "feedback-success")
+                                cls = "feedback-error" if fb['severity'] == "error" else ("feedback-warning" if fb['severity'] == "warning" else "feedback-success")
                                 icon = "❌" if fb['severity']=="error" else ("⚠️" if fb['severity']=="warning" else "✅")
                                 html += f'<div class="{cls}">{icon} {fb["message"]}</div>'
                             feedback_box.markdown(html, unsafe_allow_html=True)
@@ -617,6 +562,7 @@ with tab_live:
                             st.session_state.y_pred.append(stable_ex)
                             st.session_state.y_true.append(st.session_state.label_current)
 
+                        # responsive pause
                         time.sleep(0.02)
                 finally:
                     cap.release()
@@ -625,24 +571,21 @@ with tab_live:
         else:
             st.info("Click Start to begin local webcam detection")
 
-    # Browser camera mode (st.camera_input) with auto-refresh for pseudo-live
+    # BROWSER CAMERA MODE WITH AUTO-REFRESH
     else:
         if st.session_state.running:
-            status_text.info("Waiting for browser camera frame...")
-            frame = st.camera_input("📸 Capture live (browser camera) — allow camera permission")
-
+            status_text.info("Waiting for browser camera...")
+            frame = st.camera_input("📸 Capture or show your movement (allow camera permission)")
             if frame is None:
-                st.info("Please enable camera in your browser and grant permission.")
-                # do not stop; allow user to enable camera
+                st.info("Please allow camera permission in your browser.")
             else:
-                # Convert
+                # convert
                 img_bytes = np.asarray(bytearray(frame.read()), dtype=np.uint8)
                 image = cv2.imdecode(img_bytes, cv2.IMREAD_COLOR)
                 if image is None:
-                    status_text.error("Failed to decode camera image.")
+                    status_text.error("Failed to decode image from camera.")
                 else:
                     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
                     try:
                         keypoints = detect_pose_single(movenet, image_rgb, input_size)
                         features = extract_features(keypoints, min_kp_conf)
@@ -653,10 +596,10 @@ with tab_live:
                             raw_feedback = detect_form_errors(stable_ex, keypoints, features)
                         stable_feedback = st.session_state.fb_smoother.update(raw_feedback)
 
-                        if enable_audio and audio_system and stable_feedback:
+                        if enable_audio and stable_feedback:
                             for fb in stable_feedback:
-                                if fb['severity'] == 'error' and st.session_state.fb_smoother.should_speak(fb['metric']):
-                                    audio_system.speak(fb['message'])
+                                if fb['severity']=='error' and st.session_state.fb_smoother.should_speak(fb['metric']):
+                                    speak_text_browser(fb['message'])
 
                         annotated = draw_keypoints_and_skeleton_rgb(image_rgb, keypoints, confidence_threshold=min_kp_conf)
                         overlay = annotated.copy()
@@ -672,7 +615,7 @@ with tab_live:
                         if stable_feedback:
                             html = ""
                             for fb in stable_feedback:
-                                cls = "feedback-error" if fb['severity']=="error" else ("feedback-warning" if fb['severity']=="warning" else "feedback-success")
+                                cls = "feedback-error" if fb['severity'] == "error" else ("feedback-warning" if fb['severity'] == "warning" else "feedback-success")
                                 icon = "❌" if fb['severity']=="error" else ("⚠️" if fb['severity']=="warning" else "✅")
                                 html += f'<div class="{cls}">{icon} {fb["message"]}</div>'
                             feedback_box.markdown(html, unsafe_allow_html=True)
@@ -685,14 +628,13 @@ with tab_live:
                         if auto_log_pred and stable_conf > 0.4:
                             st.session_state.y_pred.append(stable_ex)
                             st.session_state.y_true.append(st.session_state.label_current)
-
                     except Exception as e:
                         status_text.error(f"Inference error: {e}")
 
-            # Auto-refresh behavior
+            # Auto-refresh to simulate live stream
             if auto_refresh and st.session_state.running:
-                # wait small interval then rerun to get new camera frame
                 time.sleep(refresh_interval)
+                # use stable API
                 st.rerun()
         else:
             st.info("Click Start to begin browser-camera detection")
@@ -705,11 +647,11 @@ with tab_image:
     colA, colB = st.columns([1,1])
     with colA:
         uploaded = st.file_uploader("Upload an image (jpg/png)", type=['jpg','jpeg','png'])
-        model_sel = st.selectbox("Model for inference (image)", ["Thunder","Lightning"], index=0)
+        model_sel = st.selectbox("Model for inference (image)", ["Lightning","Thunder"], index=0)
         if uploaded:
             pil = Image.open(uploaded).convert("RGB")
             img_np = np.array(pil)
-            input_s = 256 if model_sel == "Thunder" else 192
+            input_s = 192 if model_sel == "Lightning" else 256
             with st.spinner("Detecting pose & analyzing..."):
                 kps = detect_pose_single(load_movenet_model(model_sel), img_np, input_s)
                 feats = extract_features(kps, min_kp_conf)
@@ -744,9 +686,7 @@ with tab_image:
 # ---------------------------
 with tab_metrics:
     st.subheader("Evaluation & Metrics")
-    st.markdown("Metrics are computed from logged predictions and ground-truth labels collected during the session.")
     st.write(f"Logged samples: {len(st.session_state.y_true)}")
-
     if len(st.session_state.y_true) == 0:
         st.info("No recorded labels yet. Enable live labeling or add images to gather labeled data.")
     else:
@@ -787,4 +727,4 @@ with tab_metrics:
 
 # Footer
 st.markdown("---")
-st.markdown("<div style='text-align:center;color:#666;'>PosePerfect • Educational tool — not a substitute for professional coaching. For best results follow camera & lighting tips.</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align:center;color:#666;'>PosePerfect • Educational tool — not a substitute for professional coaching.</div>", unsafe_allow_html=True)
