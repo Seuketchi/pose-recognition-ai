@@ -1,0 +1,4061 @@
+[
+  {
+    "date": "2025-04-26T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 20,
+        "duration": 70,
+        "timestamp": "2025-04-26T01:49:28.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 19,
+        "duration": 83,
+        "timestamp": "2025-04-26T02:20:15.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 10,
+        "duration": 23,
+        "timestamp": "2025-04-26T01:53:54.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 20,
+        "duration": 49,
+        "timestamp": "2025-04-26T02:32:04.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-04-28T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 11,
+        "duration": 63,
+        "timestamp": "2025-04-28T02:22:10.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 12,
+        "duration": 26,
+        "timestamp": "2025-04-28T01:52:49.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 13,
+        "duration": 76,
+        "timestamp": "2025-04-28T02:19:15.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 20,
+        "duration": 60,
+        "timestamp": "2025-04-28T02:44:51.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-04-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 90,
+        "timestamp": "2025-04-29T01:54:11.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 9,
+        "duration": 48,
+        "timestamp": "2025-04-29T01:51:48.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 19,
+        "duration": 100,
+        "timestamp": "2025-04-29T02:29:01.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-04-30T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 16,
+        "duration": 64,
+        "timestamp": "2025-04-30T01:53:56.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 16,
+        "duration": 84,
+        "timestamp": "2025-04-30T02:25:17.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 12,
+        "duration": 77,
+        "timestamp": "2025-05-02T02:22:29.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 14,
+        "duration": 115,
+        "timestamp": "2025-05-02T02:42:46.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 45,
+        "timestamp": "2025-05-02T01:59:34.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 13,
+        "duration": 116,
+        "timestamp": "2025-05-02T02:29:14.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 12,
+        "duration": 24,
+        "timestamp": "2025-05-02T02:32:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 104,
+        "timestamp": "2025-05-03T01:51:12.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 6,
+        "duration": 59,
+        "timestamp": "2025-05-03T02:08:51.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 6,
+        "duration": 72,
+        "timestamp": "2025-05-03T02:00:07.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 13,
+        "duration": 97,
+        "timestamp": "2025-05-03T02:25:17.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 9,
+        "duration": 48,
+        "timestamp": "2025-05-03T02:14:04.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 5,
+        "duration": 113,
+        "timestamp": "2025-05-03T02:17:36.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 7,
+        "duration": 68,
+        "timestamp": "2025-05-03T01:51:44.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 16,
+        "duration": 40,
+        "timestamp": "2025-05-03T01:46:01.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 47,
+        "timestamp": "2025-05-03T01:45:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 7,
+        "duration": 92,
+        "timestamp": "2025-05-04T02:23:27.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 11,
+        "duration": 55,
+        "timestamp": "2025-05-04T02:35:41.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 10,
+        "duration": 60,
+        "timestamp": "2025-05-04T02:34:09.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 5,
+        "duration": 33,
+        "timestamp": "2025-05-04T02:24:18.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 48,
+        "timestamp": "2025-05-04T02:33:38.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-05T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 7,
+        "duration": 23,
+        "timestamp": "2025-05-05T02:09:49.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-06T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 20,
+        "duration": 62,
+        "timestamp": "2025-05-06T02:41:36.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 16,
+        "duration": 68,
+        "timestamp": "2025-05-06T01:46:21.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-06T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 20,
+        "duration": 113,
+        "timestamp": "2025-05-06T02:27:52.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-07T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 10,
+        "duration": 68,
+        "timestamp": "2025-05-07T02:04:07.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 19,
+        "duration": 47,
+        "timestamp": "2025-05-07T01:58:00.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 17,
+        "duration": 104,
+        "timestamp": "2025-05-07T02:20:24.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 15,
+        "duration": 23,
+        "timestamp": "2025-05-09T02:10:54.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 11,
+        "duration": 113,
+        "timestamp": "2025-05-09T01:55:03.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 11,
+        "duration": 37,
+        "timestamp": "2025-05-09T02:24:24.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 16,
+        "duration": 44,
+        "timestamp": "2025-05-09T02:22:06.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-12T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 6,
+        "duration": 115,
+        "timestamp": "2025-05-12T02:08:06.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 6,
+        "duration": 94,
+        "timestamp": "2025-05-13T02:08:00.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 12,
+        "duration": 81,
+        "timestamp": "2025-05-13T02:08:51.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 10,
+        "duration": 96,
+        "timestamp": "2025-05-13T02:32:01.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 8,
+        "duration": 48,
+        "timestamp": "2025-05-13T02:36:57.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 6,
+        "duration": 74,
+        "timestamp": "2025-05-13T01:54:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-16T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 18,
+        "duration": 85,
+        "timestamp": "2025-05-16T01:52:25.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 19,
+        "duration": 50,
+        "timestamp": "2025-05-16T01:56:24.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 14,
+        "duration": 34,
+        "timestamp": "2025-05-16T01:47:50.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-16T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 6,
+        "duration": 31,
+        "timestamp": "2025-05-16T02:43:29.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 11,
+        "duration": 71,
+        "timestamp": "2025-05-16T01:52:24.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 12,
+        "duration": 103,
+        "timestamp": "2025-05-16T01:51:46.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 7,
+        "duration": 51,
+        "timestamp": "2025-05-16T02:43:45.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 13,
+        "duration": 28,
+        "timestamp": "2025-05-16T02:02:28.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 9,
+        "duration": 81,
+        "timestamp": "2025-05-18T02:24:59.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 20,
+        "duration": 39,
+        "timestamp": "2025-05-18T02:00:30.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 52,
+        "timestamp": "2025-05-18T02:18:39.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-19T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 20,
+        "duration": 91,
+        "timestamp": "2025-05-19T02:06:07.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 16,
+        "duration": 66,
+        "timestamp": "2025-05-19T02:23:30.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 9,
+        "duration": 50,
+        "timestamp": "2025-05-19T02:37:49.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-19T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 16,
+        "duration": 82,
+        "timestamp": "2025-05-19T02:29:57.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 19,
+        "duration": 67,
+        "timestamp": "2025-05-19T01:52:33.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 18,
+        "duration": 28,
+        "timestamp": "2025-05-19T02:29:34.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 7,
+        "duration": 108,
+        "timestamp": "2025-05-20T02:34:31.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 19,
+        "duration": 50,
+        "timestamp": "2025-05-20T02:05:15.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 19,
+        "duration": 114,
+        "timestamp": "2025-05-20T02:22:20.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 6,
+        "duration": 45,
+        "timestamp": "2025-05-20T01:45:01.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 17,
+        "duration": 101,
+        "timestamp": "2025-05-20T02:31:00.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 5,
+        "duration": 52,
+        "timestamp": "2025-05-22T02:39:16.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 12,
+        "duration": 26,
+        "timestamp": "2025-05-22T01:52:29.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 15,
+        "duration": 117,
+        "timestamp": "2025-05-22T01:46:54.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 10,
+        "duration": 66,
+        "timestamp": "2025-05-22T02:09:06.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 20,
+        "duration": 112,
+        "timestamp": "2025-05-22T02:07:13.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 33,
+        "timestamp": "2025-05-22T02:18:51.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 19,
+        "duration": 80,
+        "timestamp": "2025-05-22T01:48:58.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 33,
+        "timestamp": "2025-05-22T02:13:09.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 14,
+        "duration": 35,
+        "timestamp": "2025-05-22T02:06:39.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 11,
+        "duration": 30,
+        "timestamp": "2025-05-22T01:59:02.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-23T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 8,
+        "duration": 72,
+        "timestamp": "2025-05-23T01:54:27.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 10,
+        "duration": 95,
+        "timestamp": "2025-05-23T02:09:40.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 13,
+        "duration": 112,
+        "timestamp": "2025-05-24T02:08:22.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 8,
+        "duration": 101,
+        "timestamp": "2025-05-24T02:15:04.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 11,
+        "duration": 48,
+        "timestamp": "2025-05-24T02:37:03.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 8,
+        "duration": 84,
+        "timestamp": "2025-05-24T02:00:37.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 101,
+        "timestamp": "2025-05-24T02:04:26.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 69,
+        "timestamp": "2025-05-24T02:09:54.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-25T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 97,
+        "timestamp": "2025-05-25T02:17:54.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 15,
+        "duration": 52,
+        "timestamp": "2025-05-25T01:49:20.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 112,
+        "timestamp": "2025-05-25T01:45:36.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 17,
+        "duration": 119,
+        "timestamp": "2025-05-25T01:59:06.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 20,
+        "duration": 23,
+        "timestamp": "2025-05-25T02:16:54.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-25T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 11,
+        "duration": 26,
+        "timestamp": "2025-05-25T01:56:44.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 14,
+        "duration": 39,
+        "timestamp": "2025-05-25T02:13:18.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 19,
+        "duration": 41,
+        "timestamp": "2025-05-25T02:03:03.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 15,
+        "duration": 49,
+        "timestamp": "2025-05-25T02:42:27.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-28T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 14,
+        "duration": 28,
+        "timestamp": "2025-05-28T02:03:35.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 27,
+        "timestamp": "2025-05-28T02:24:58.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 16,
+        "duration": 57,
+        "timestamp": "2025-05-28T02:27:38.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 19,
+        "duration": 43,
+        "timestamp": "2025-05-28T02:15:20.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 12,
+        "duration": 56,
+        "timestamp": "2025-05-28T02:09:21.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-30T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 18,
+        "duration": 40,
+        "timestamp": "2025-05-30T02:33:17.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-31T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 5,
+        "duration": 31,
+        "timestamp": "2025-05-31T01:53:12.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 7,
+        "duration": 51,
+        "timestamp": "2025-05-31T01:49:45.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-05-31T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 91,
+        "timestamp": "2025-05-31T02:14:06.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 14,
+        "duration": 119,
+        "timestamp": "2025-05-31T02:04:30.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-01T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 12,
+        "duration": 116,
+        "timestamp": "2025-06-01T02:04:28.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 46,
+        "timestamp": "2025-06-03T02:32:16.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 5,
+        "duration": 30,
+        "timestamp": "2025-06-03T01:47:34.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 16,
+        "duration": 70,
+        "timestamp": "2025-06-03T02:04:59.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 8,
+        "duration": 115,
+        "timestamp": "2025-06-03T02:27:46.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 19,
+        "duration": 31,
+        "timestamp": "2025-06-03T02:00:27.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 114,
+        "timestamp": "2025-06-04T02:24:37.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 20,
+        "duration": 60,
+        "timestamp": "2025-06-04T02:32:23.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 8,
+        "duration": 50,
+        "timestamp": "2025-06-04T01:54:03.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 13,
+        "duration": 39,
+        "timestamp": "2025-06-04T02:36:48.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 20,
+        "duration": 73,
+        "timestamp": "2025-06-04T02:31:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-06T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 15,
+        "duration": 27,
+        "timestamp": "2025-06-06T02:02:53.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 13,
+        "duration": 51,
+        "timestamp": "2025-06-06T02:41:35.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 20,
+        "duration": 97,
+        "timestamp": "2025-06-06T01:47:44.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 13,
+        "duration": 98,
+        "timestamp": "2025-06-06T02:15:17.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 11,
+        "duration": 79,
+        "timestamp": "2025-06-06T02:13:06.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-10T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 83,
+        "timestamp": "2025-06-10T02:43:16.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 12,
+        "duration": 115,
+        "timestamp": "2025-06-10T01:54:07.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-11T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 5,
+        "duration": 39,
+        "timestamp": "2025-06-11T02:27:59.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 13,
+        "duration": 46,
+        "timestamp": "2025-06-11T02:04:22.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 19,
+        "duration": 105,
+        "timestamp": "2025-06-11T02:06:32.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-11T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 5,
+        "duration": 66,
+        "timestamp": "2025-06-11T02:07:05.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 7,
+        "duration": 59,
+        "timestamp": "2025-06-11T02:31:35.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 17,
+        "duration": 21,
+        "timestamp": "2025-06-11T02:18:58.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-12T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 18,
+        "duration": 39,
+        "timestamp": "2025-06-12T01:57:29.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 109,
+        "timestamp": "2025-06-12T01:56:04.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 13,
+        "duration": 28,
+        "timestamp": "2025-06-12T02:10:40.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-12T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 15,
+        "duration": 26,
+        "timestamp": "2025-06-12T02:27:41.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 12,
+        "duration": 26,
+        "timestamp": "2025-06-12T02:23:07.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 9,
+        "duration": 23,
+        "timestamp": "2025-06-12T02:04:20.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 17,
+        "duration": 64,
+        "timestamp": "2025-06-12T01:52:52.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 26,
+        "timestamp": "2025-06-12T02:05:58.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 50,
+        "timestamp": "2025-06-14T02:30:34.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 9,
+        "duration": 92,
+        "timestamp": "2025-06-14T02:23:43.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 11,
+        "duration": 35,
+        "timestamp": "2025-06-14T01:45:23.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-17T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 18,
+        "duration": 113,
+        "timestamp": "2025-06-17T02:15:58.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 17,
+        "duration": 97,
+        "timestamp": "2025-06-17T02:44:04.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 19,
+        "duration": 61,
+        "timestamp": "2025-06-17T01:47:03.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 5,
+        "duration": 79,
+        "timestamp": "2025-06-18T02:33:35.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 5,
+        "duration": 96,
+        "timestamp": "2025-06-18T01:47:01.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 6,
+        "duration": 97,
+        "timestamp": "2025-06-18T02:40:31.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 14,
+        "duration": 85,
+        "timestamp": "2025-06-18T02:14:43.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 63,
+        "timestamp": "2025-06-18T01:52:55.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 18,
+        "duration": 95,
+        "timestamp": "2025-06-18T02:19:46.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-19T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 9,
+        "duration": 119,
+        "timestamp": "2025-06-19T02:39:49.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 19,
+        "duration": 35,
+        "timestamp": "2025-06-19T02:24:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 18,
+        "duration": 33,
+        "timestamp": "2025-06-20T02:37:39.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 16,
+        "duration": 62,
+        "timestamp": "2025-06-20T02:10:44.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 17,
+        "duration": 87,
+        "timestamp": "2025-06-20T02:35:52.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 16,
+        "duration": 108,
+        "timestamp": "2025-06-20T01:49:25.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 17,
+        "duration": 36,
+        "timestamp": "2025-06-20T02:27:20.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 5,
+        "duration": 95,
+        "timestamp": "2025-06-20T02:24:41.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-23T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 5,
+        "duration": 85,
+        "timestamp": "2025-06-23T01:58:48.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 19,
+        "duration": 59,
+        "timestamp": "2025-06-23T02:14:10.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 6,
+        "duration": 120,
+        "timestamp": "2025-06-23T02:22:19.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 15,
+        "duration": 39,
+        "timestamp": "2025-06-23T02:22:25.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 8,
+        "duration": 79,
+        "timestamp": "2025-06-23T02:41:48.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-23T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 5,
+        "duration": 84,
+        "timestamp": "2025-06-23T01:50:31.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 13,
+        "duration": 34,
+        "timestamp": "2025-06-23T01:54:08.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 19,
+        "duration": 107,
+        "timestamp": "2025-06-23T02:26:10.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 5,
+        "duration": 68,
+        "timestamp": "2025-06-23T02:44:18.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 5,
+        "duration": 50,
+        "timestamp": "2025-06-24T01:50:10.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 8,
+        "duration": 21,
+        "timestamp": "2025-06-24T01:59:34.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 14,
+        "duration": 61,
+        "timestamp": "2025-06-24T02:03:53.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-26T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 7,
+        "duration": 96,
+        "timestamp": "2025-06-26T02:30:05.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 14,
+        "duration": 20,
+        "timestamp": "2025-06-26T02:24:31.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 12,
+        "duration": 81,
+        "timestamp": "2025-06-26T02:25:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-26T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 5,
+        "duration": 57,
+        "timestamp": "2025-06-26T02:07:34.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 113,
+        "timestamp": "2025-06-26T01:48:31.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 13,
+        "duration": 60,
+        "timestamp": "2025-06-26T02:03:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-27T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 6,
+        "duration": 52,
+        "timestamp": "2025-06-27T02:13:27.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 6,
+        "duration": 92,
+        "timestamp": "2025-06-27T02:32:13.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 17,
+        "duration": 92,
+        "timestamp": "2025-06-27T02:12:39.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 16,
+        "duration": 68,
+        "timestamp": "2025-06-27T02:22:18.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 16,
+        "duration": 84,
+        "timestamp": "2025-06-29T02:29:42.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 5,
+        "duration": 117,
+        "timestamp": "2025-06-29T01:59:00.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 8,
+        "duration": 48,
+        "timestamp": "2025-06-29T02:28:07.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 10,
+        "duration": 23,
+        "timestamp": "2025-06-29T02:11:09.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 14,
+        "duration": 65,
+        "timestamp": "2025-06-29T02:30:23.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 53,
+        "timestamp": "2025-06-29T02:05:56.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-30T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 15,
+        "duration": 86,
+        "timestamp": "2025-06-30T02:00:06.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-06-30T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 46,
+        "timestamp": "2025-06-30T02:10:55.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 6,
+        "duration": 84,
+        "timestamp": "2025-06-30T02:11:05.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 8,
+        "duration": 32,
+        "timestamp": "2025-07-02T02:13:10.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 12,
+        "duration": 120,
+        "timestamp": "2025-07-02T02:26:32.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 6,
+        "duration": 34,
+        "timestamp": "2025-07-02T02:03:13.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 12,
+        "duration": 71,
+        "timestamp": "2025-07-02T02:19:35.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 10,
+        "duration": 30,
+        "timestamp": "2025-07-04T02:28:55.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 6,
+        "duration": 81,
+        "timestamp": "2025-07-04T01:59:43.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 10,
+        "duration": 64,
+        "timestamp": "2025-07-04T02:12:03.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 10,
+        "duration": 35,
+        "timestamp": "2025-07-04T02:30:00.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 19,
+        "duration": 116,
+        "timestamp": "2025-07-04T02:14:45.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 7,
+        "duration": 31,
+        "timestamp": "2025-07-04T02:20:47.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 81,
+        "timestamp": "2025-07-04T02:14:31.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 8,
+        "duration": 47,
+        "timestamp": "2025-07-04T02:36:02.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-07T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 16,
+        "duration": 50,
+        "timestamp": "2025-07-07T02:25:25.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 18,
+        "duration": 45,
+        "timestamp": "2025-07-07T02:24:04.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 11,
+        "duration": 39,
+        "timestamp": "2025-07-07T02:00:18.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 13,
+        "duration": 118,
+        "timestamp": "2025-07-07T02:35:57.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 14,
+        "duration": 85,
+        "timestamp": "2025-07-07T02:23:48.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-08T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 13,
+        "duration": 63,
+        "timestamp": "2025-07-08T02:23:19.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 8,
+        "duration": 115,
+        "timestamp": "2025-07-08T02:28:10.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 8,
+        "duration": 74,
+        "timestamp": "2025-07-08T02:09:36.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 8,
+        "duration": 48,
+        "timestamp": "2025-07-08T02:25:48.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 20,
+        "duration": 31,
+        "timestamp": "2025-07-08T01:48:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-08T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 112,
+        "timestamp": "2025-07-08T01:58:28.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 20,
+        "duration": 57,
+        "timestamp": "2025-07-08T02:04:10.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 10,
+        "duration": 24,
+        "timestamp": "2025-07-08T02:07:50.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 11,
+        "duration": 52,
+        "timestamp": "2025-07-08T01:57:35.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-10T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 7,
+        "duration": 26,
+        "timestamp": "2025-07-10T02:33:27.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 15,
+        "duration": 72,
+        "timestamp": "2025-07-10T02:34:01.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 13,
+        "duration": 56,
+        "timestamp": "2025-07-10T02:27:45.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 13,
+        "duration": 57,
+        "timestamp": "2025-07-10T02:01:43.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 53,
+        "timestamp": "2025-07-10T02:27:13.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-11T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 6,
+        "duration": 73,
+        "timestamp": "2025-07-11T02:27:15.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 9,
+        "duration": 63,
+        "timestamp": "2025-07-11T02:11:05.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 10,
+        "duration": 71,
+        "timestamp": "2025-07-11T02:34:44.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 17,
+        "duration": 36,
+        "timestamp": "2025-07-11T02:04:49.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-12T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 14,
+        "duration": 45,
+        "timestamp": "2025-07-12T02:19:18.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 10,
+        "duration": 120,
+        "timestamp": "2025-07-12T02:43:19.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 9,
+        "duration": 50,
+        "timestamp": "2025-07-12T02:38:07.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 15,
+        "duration": 109,
+        "timestamp": "2025-07-14T02:00:34.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 15,
+        "duration": 30,
+        "timestamp": "2025-07-14T02:20:46.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 6,
+        "duration": 89,
+        "timestamp": "2025-07-14T02:03:14.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 11,
+        "duration": 58,
+        "timestamp": "2025-07-14T02:33:39.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 6,
+        "duration": 117,
+        "timestamp": "2025-07-14T02:15:41.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 5,
+        "duration": 22,
+        "timestamp": "2025-07-14T02:06:38.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-15T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 9,
+        "duration": 91,
+        "timestamp": "2025-07-15T02:25:44.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 15,
+        "duration": 109,
+        "timestamp": "2025-07-15T02:23:24.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-15T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 8,
+        "duration": 111,
+        "timestamp": "2025-07-15T02:06:26.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 5,
+        "duration": 34,
+        "timestamp": "2025-07-15T01:59:48.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-16T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 15,
+        "duration": 119,
+        "timestamp": "2025-07-16T01:58:47.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 5,
+        "duration": 88,
+        "timestamp": "2025-07-16T02:21:56.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 18,
+        "duration": 80,
+        "timestamp": "2025-07-16T01:45:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-16T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 11,
+        "duration": 88,
+        "timestamp": "2025-07-16T02:37:50.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 14,
+        "duration": 95,
+        "timestamp": "2025-07-16T02:35:21.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 5,
+        "duration": 85,
+        "timestamp": "2025-07-18T02:26:21.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 16,
+        "duration": 57,
+        "timestamp": "2025-07-20T02:17:01.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 20,
+        "duration": 92,
+        "timestamp": "2025-07-20T01:46:56.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 5,
+        "duration": 92,
+        "timestamp": "2025-07-20T02:13:12.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 15,
+        "duration": 49,
+        "timestamp": "2025-07-22T02:20:18.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 13,
+        "duration": 25,
+        "timestamp": "2025-07-22T02:01:59.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 13,
+        "duration": 102,
+        "timestamp": "2025-07-22T02:03:52.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 22,
+        "timestamp": "2025-07-22T02:36:25.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 15,
+        "duration": 54,
+        "timestamp": "2025-07-22T01:47:04.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 12,
+        "duration": 46,
+        "timestamp": "2025-07-24T02:30:23.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 16,
+        "duration": 97,
+        "timestamp": "2025-07-24T02:03:58.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-27T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 12,
+        "duration": 98,
+        "timestamp": "2025-07-27T02:33:38.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 8,
+        "duration": 55,
+        "timestamp": "2025-07-27T02:12:30.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 20,
+        "duration": 46,
+        "timestamp": "2025-07-27T02:41:42.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 82,
+        "timestamp": "2025-07-27T02:30:34.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 6,
+        "duration": 42,
+        "timestamp": "2025-07-27T02:23:18.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-28T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 5,
+        "duration": 49,
+        "timestamp": "2025-07-28T01:45:18.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-28T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 76,
+        "timestamp": "2025-07-28T02:14:02.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 20,
+        "duration": 42,
+        "timestamp": "2025-07-28T02:14:34.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 18,
+        "duration": 58,
+        "timestamp": "2025-07-28T01:51:18.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 20,
+        "duration": 29,
+        "timestamp": "2025-07-28T02:35:16.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 10,
+        "duration": 31,
+        "timestamp": "2025-07-29T01:57:12.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 10,
+        "duration": 32,
+        "timestamp": "2025-07-29T02:19:07.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 7,
+        "duration": 65,
+        "timestamp": "2025-07-29T02:38:44.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-07-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 18,
+        "duration": 84,
+        "timestamp": "2025-07-29T02:38:39.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 104,
+        "timestamp": "2025-07-29T02:20:40.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 11,
+        "duration": 32,
+        "timestamp": "2025-07-29T02:08:16.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-01T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 19,
+        "duration": 37,
+        "timestamp": "2025-08-01T02:35:10.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 19,
+        "duration": 90,
+        "timestamp": "2025-08-01T02:22:28.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 16,
+        "duration": 95,
+        "timestamp": "2025-08-01T02:41:36.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 7,
+        "duration": 25,
+        "timestamp": "2025-08-01T02:14:17.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 15,
+        "duration": 31,
+        "timestamp": "2025-08-01T02:19:39.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-01T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 19,
+        "duration": 50,
+        "timestamp": "2025-08-01T01:49:12.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 5,
+        "duration": 75,
+        "timestamp": "2025-08-01T02:12:37.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 11,
+        "duration": 62,
+        "timestamp": "2025-08-02T01:46:47.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 10,
+        "duration": 22,
+        "timestamp": "2025-08-02T01:57:58.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 12,
+        "duration": 105,
+        "timestamp": "2025-08-02T02:41:16.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 10,
+        "duration": 43,
+        "timestamp": "2025-08-02T02:00:34.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 15,
+        "duration": 92,
+        "timestamp": "2025-08-02T02:30:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 53,
+        "timestamp": "2025-08-03T02:15:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 14,
+        "duration": 76,
+        "timestamp": "2025-08-04T01:57:15.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 12,
+        "duration": 94,
+        "timestamp": "2025-08-04T02:44:49.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 7,
+        "duration": 90,
+        "timestamp": "2025-08-04T01:48:39.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 18,
+        "duration": 39,
+        "timestamp": "2025-08-04T02:26:39.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-04T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 12,
+        "duration": 51,
+        "timestamp": "2025-08-04T01:45:05.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 8,
+        "duration": 108,
+        "timestamp": "2025-08-04T01:47:15.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 11,
+        "duration": 117,
+        "timestamp": "2025-08-04T02:41:03.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 88,
+        "timestamp": "2025-08-04T02:33:10.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 18,
+        "duration": 31,
+        "timestamp": "2025-08-04T02:05:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-06T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 15,
+        "duration": 111,
+        "timestamp": "2025-08-06T01:50:34.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 15,
+        "duration": 86,
+        "timestamp": "2025-08-06T02:27:15.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 17,
+        "duration": 32,
+        "timestamp": "2025-08-06T02:14:25.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 10,
+        "duration": 41,
+        "timestamp": "2025-08-06T02:37:12.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 10,
+        "duration": 120,
+        "timestamp": "2025-08-06T02:33:56.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-08T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 5,
+        "duration": 47,
+        "timestamp": "2025-08-08T01:51:44.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 12,
+        "duration": 32,
+        "timestamp": "2025-08-08T01:55:15.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 12,
+        "duration": 72,
+        "timestamp": "2025-08-08T01:51:25.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-08T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 8,
+        "duration": 71,
+        "timestamp": "2025-08-08T01:56:01.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 6,
+        "duration": 82,
+        "timestamp": "2025-08-08T02:43:10.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 17,
+        "duration": 62,
+        "timestamp": "2025-08-08T02:01:20.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 16,
+        "duration": 95,
+        "timestamp": "2025-08-08T01:57:19.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 60,
+        "timestamp": "2025-08-09T02:35:58.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 15,
+        "duration": 40,
+        "timestamp": "2025-08-09T02:44:40.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 19,
+        "duration": 106,
+        "timestamp": "2025-08-09T02:33:49.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 9,
+        "duration": 36,
+        "timestamp": "2025-08-09T02:04:55.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 15,
+        "duration": 107,
+        "timestamp": "2025-08-09T02:11:19.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-10T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 5,
+        "duration": 36,
+        "timestamp": "2025-08-10T02:36:59.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 11,
+        "duration": 30,
+        "timestamp": "2025-08-10T02:00:28.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 9,
+        "duration": 56,
+        "timestamp": "2025-08-10T02:01:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-11T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 20,
+        "duration": 120,
+        "timestamp": "2025-08-11T01:58:08.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 9,
+        "duration": 81,
+        "timestamp": "2025-08-11T01:56:21.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-12T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 17,
+        "duration": 58,
+        "timestamp": "2025-08-12T01:59:23.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 6,
+        "duration": 64,
+        "timestamp": "2025-08-12T02:02:12.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 9,
+        "duration": 67,
+        "timestamp": "2025-08-12T01:53:55.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 18,
+        "duration": 53,
+        "timestamp": "2025-08-13T02:04:52.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 83,
+        "timestamp": "2025-08-13T02:40:59.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 20,
+        "duration": 96,
+        "timestamp": "2025-08-13T01:52:31.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 18,
+        "duration": 49,
+        "timestamp": "2025-08-13T02:19:04.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 10,
+        "duration": 22,
+        "timestamp": "2025-08-13T02:29:56.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 50,
+        "timestamp": "2025-08-14T02:17:05.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 11,
+        "duration": 41,
+        "timestamp": "2025-08-14T02:18:18.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 8,
+        "duration": 105,
+        "timestamp": "2025-08-14T02:36:12.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 10,
+        "duration": 82,
+        "timestamp": "2025-08-14T02:16:48.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 11,
+        "duration": 91,
+        "timestamp": "2025-08-14T01:45:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 11,
+        "duration": 64,
+        "timestamp": "2025-08-14T01:53:27.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 11,
+        "duration": 88,
+        "timestamp": "2025-08-14T02:22:51.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 18,
+        "duration": 28,
+        "timestamp": "2025-08-18T02:19:01.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 5,
+        "duration": 31,
+        "timestamp": "2025-08-18T01:57:33.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 16,
+        "duration": 69,
+        "timestamp": "2025-08-18T01:48:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-19T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 17,
+        "duration": 38,
+        "timestamp": "2025-08-19T02:14:36.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 18,
+        "duration": 87,
+        "timestamp": "2025-08-19T01:59:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-19T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 10,
+        "duration": 103,
+        "timestamp": "2025-08-19T01:57:12.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 13,
+        "duration": 105,
+        "timestamp": "2025-08-19T01:47:55.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 10,
+        "duration": 93,
+        "timestamp": "2025-08-20T02:20:28.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 10,
+        "duration": 68,
+        "timestamp": "2025-08-20T01:46:24.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 93,
+        "timestamp": "2025-08-20T02:30:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 8,
+        "duration": 26,
+        "timestamp": "2025-08-22T02:29:57.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 67,
+        "timestamp": "2025-08-22T01:47:07.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-23T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 12,
+        "duration": 83,
+        "timestamp": "2025-08-23T02:01:17.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 7,
+        "duration": 22,
+        "timestamp": "2025-08-23T01:59:00.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 27,
+        "timestamp": "2025-08-23T02:41:17.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 15,
+        "duration": 50,
+        "timestamp": "2025-08-23T01:52:40.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 17,
+        "duration": 28,
+        "timestamp": "2025-08-23T02:19:34.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 5,
+        "duration": 37,
+        "timestamp": "2025-08-24T02:15:28.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 12,
+        "duration": 36,
+        "timestamp": "2025-08-24T02:11:47.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 18,
+        "duration": 21,
+        "timestamp": "2025-08-24T01:57:59.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 17,
+        "duration": 120,
+        "timestamp": "2025-08-24T01:54:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 7,
+        "duration": 104,
+        "timestamp": "2025-08-24T02:36:18.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 9,
+        "duration": 59,
+        "timestamp": "2025-08-24T02:28:55.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 11,
+        "duration": 48,
+        "timestamp": "2025-08-24T02:25:05.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 16,
+        "duration": 69,
+        "timestamp": "2025-08-24T02:32:30.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 11,
+        "duration": 70,
+        "timestamp": "2025-08-24T02:29:03.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-26T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 18,
+        "duration": 25,
+        "timestamp": "2025-08-26T02:43:19.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-26T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 9,
+        "duration": 66,
+        "timestamp": "2025-08-26T02:25:10.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 13,
+        "duration": 100,
+        "timestamp": "2025-08-26T02:34:32.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-27T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 12,
+        "duration": 120,
+        "timestamp": "2025-08-27T02:38:12.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-28T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 19,
+        "duration": 97,
+        "timestamp": "2025-08-28T01:46:14.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 10,
+        "duration": 43,
+        "timestamp": "2025-08-28T01:59:03.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 20,
+        "duration": 94,
+        "timestamp": "2025-08-28T01:50:02.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 31,
+        "timestamp": "2025-08-28T02:06:27.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-28T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 9,
+        "duration": 110,
+        "timestamp": "2025-08-28T02:15:44.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 19,
+        "duration": 97,
+        "timestamp": "2025-08-29T01:54:35.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-29T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 5,
+        "duration": 86,
+        "timestamp": "2025-08-29T01:58:21.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 12,
+        "duration": 111,
+        "timestamp": "2025-08-29T02:29:41.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 57,
+        "timestamp": "2025-08-29T02:17:34.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 14,
+        "duration": 69,
+        "timestamp": "2025-08-29T02:16:00.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 18,
+        "duration": 45,
+        "timestamp": "2025-08-29T02:02:36.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-30T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 14,
+        "duration": 85,
+        "timestamp": "2025-08-30T02:38:46.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 17,
+        "duration": 22,
+        "timestamp": "2025-08-30T01:48:05.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 55,
+        "timestamp": "2025-08-30T01:49:16.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 8,
+        "duration": 39,
+        "timestamp": "2025-08-30T02:11:28.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 12,
+        "duration": 60,
+        "timestamp": "2025-08-30T01:49:05.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-08-30T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 5,
+        "duration": 86,
+        "timestamp": "2025-08-30T02:26:05.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 10,
+        "duration": 22,
+        "timestamp": "2025-08-30T01:45:56.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 15,
+        "duration": 118,
+        "timestamp": "2025-08-30T01:53:00.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 9,
+        "duration": 54,
+        "timestamp": "2025-08-30T01:48:34.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 14,
+        "duration": 69,
+        "timestamp": "2025-08-30T02:25:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-01T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 20,
+        "duration": 86,
+        "timestamp": "2025-09-01T02:07:54.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 15,
+        "duration": 47,
+        "timestamp": "2025-09-01T02:22:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 19,
+        "duration": 31,
+        "timestamp": "2025-09-02T02:23:55.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 13,
+        "duration": 47,
+        "timestamp": "2025-09-02T02:27:40.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 6,
+        "duration": 72,
+        "timestamp": "2025-09-02T02:38:00.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 76,
+        "timestamp": "2025-09-02T02:03:57.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 10,
+        "duration": 30,
+        "timestamp": "2025-09-03T02:07:43.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 12,
+        "duration": 48,
+        "timestamp": "2025-09-03T02:29:50.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 7,
+        "duration": 80,
+        "timestamp": "2025-09-03T01:46:25.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 16,
+        "duration": 98,
+        "timestamp": "2025-09-03T02:08:33.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 16,
+        "duration": 91,
+        "timestamp": "2025-09-03T02:04:26.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 7,
+        "duration": 99,
+        "timestamp": "2025-09-03T02:32:40.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 108,
+        "timestamp": "2025-09-03T02:18:52.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-07T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 6,
+        "duration": 39,
+        "timestamp": "2025-09-07T02:22:13.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 7,
+        "duration": 71,
+        "timestamp": "2025-09-07T02:15:51.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 5,
+        "duration": 86,
+        "timestamp": "2025-09-07T01:55:40.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 16,
+        "duration": 25,
+        "timestamp": "2025-09-07T02:30:27.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 15,
+        "duration": 77,
+        "timestamp": "2025-09-07T02:09:11.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-07T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 5,
+        "duration": 68,
+        "timestamp": "2025-09-07T01:58:03.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 15,
+        "duration": 89,
+        "timestamp": "2025-09-07T02:02:18.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 101,
+        "timestamp": "2025-09-07T01:55:06.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-08T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 11,
+        "duration": 47,
+        "timestamp": "2025-09-08T02:02:58.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 10,
+        "duration": 56,
+        "timestamp": "2025-09-08T02:10:18.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 9,
+        "duration": 35,
+        "timestamp": "2025-09-08T02:13:42.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 8,
+        "duration": 20,
+        "timestamp": "2025-09-08T02:21:54.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 6,
+        "duration": 113,
+        "timestamp": "2025-09-08T02:38:35.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "sit up",
+        "reps": 14,
+        "duration": 118,
+        "timestamp": "2025-09-09T01:48:36.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 7,
+        "duration": 120,
+        "timestamp": "2025-09-09T02:21:39.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 14,
+        "duration": 69,
+        "timestamp": "2025-09-09T02:00:22.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 11,
+        "duration": 37,
+        "timestamp": "2025-09-09T02:13:27.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-11T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 18,
+        "duration": 82,
+        "timestamp": "2025-09-11T02:29:03.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 15,
+        "duration": 20,
+        "timestamp": "2025-09-11T02:35:53.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 20,
+        "duration": 97,
+        "timestamp": "2025-09-11T02:02:23.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 9,
+        "duration": 58,
+        "timestamp": "2025-09-11T02:04:29.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 47,
+        "timestamp": "2025-09-13T02:25:34.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 10,
+        "duration": 99,
+        "timestamp": "2025-09-13T02:13:39.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 8,
+        "duration": 59,
+        "timestamp": "2025-09-13T02:02:07.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 13,
+        "duration": 45,
+        "timestamp": "2025-09-14T02:26:36.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-15T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 18,
+        "duration": 42,
+        "timestamp": "2025-09-15T01:52:52.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-15T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 71,
+        "timestamp": "2025-09-15T02:35:09.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 18,
+        "duration": 67,
+        "timestamp": "2025-09-15T02:30:24.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 10,
+        "duration": 52,
+        "timestamp": "2025-09-15T02:20:50.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-16T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 15,
+        "duration": 35,
+        "timestamp": "2025-09-16T01:58:38.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 11,
+        "duration": 34,
+        "timestamp": "2025-09-16T02:11:38.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-18T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 16,
+        "duration": 32,
+        "timestamp": "2025-09-18T02:15:19.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 18,
+        "duration": 120,
+        "timestamp": "2025-09-18T01:47:45.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 17,
+        "duration": 96,
+        "timestamp": "2025-09-20T02:33:02.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 7,
+        "duration": 44,
+        "timestamp": "2025-09-20T02:27:50.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 12,
+        "duration": 26,
+        "timestamp": "2025-09-20T02:39:00.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 20,
+        "duration": 60,
+        "timestamp": "2025-09-20T02:27:12.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 92,
+        "timestamp": "2025-09-20T02:22:35.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 12,
+        "duration": 116,
+        "timestamp": "2025-09-22T02:29:34.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 12,
+        "duration": 57,
+        "timestamp": "2025-09-22T02:10:17.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 18,
+        "duration": 45,
+        "timestamp": "2025-09-22T02:04:19.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-23T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 12,
+        "duration": 85,
+        "timestamp": "2025-09-23T02:11:07.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 29,
+        "timestamp": "2025-09-23T02:26:40.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 11,
+        "duration": 39,
+        "timestamp": "2025-09-23T02:30:21.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 8,
+        "duration": 67,
+        "timestamp": "2025-09-23T02:37:03.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-23T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 11,
+        "duration": 23,
+        "timestamp": "2025-09-23T02:11:33.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 8,
+        "duration": 69,
+        "timestamp": "2025-09-23T02:06:52.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 7,
+        "duration": 50,
+        "timestamp": "2025-09-23T01:46:39.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 20,
+        "duration": 90,
+        "timestamp": "2025-09-23T01:48:24.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 18,
+        "duration": 22,
+        "timestamp": "2025-09-23T02:08:40.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-24T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 17,
+        "duration": 23,
+        "timestamp": "2025-09-24T02:36:49.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 8,
+        "duration": 120,
+        "timestamp": "2025-09-24T02:10:49.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 7,
+        "duration": 102,
+        "timestamp": "2025-09-24T02:31:51.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-25T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 7,
+        "duration": 55,
+        "timestamp": "2025-09-25T02:42:33.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 8,
+        "duration": 23,
+        "timestamp": "2025-09-25T02:06:25.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 16,
+        "duration": 103,
+        "timestamp": "2025-09-25T02:24:55.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 14,
+        "duration": 57,
+        "timestamp": "2025-09-25T02:41:22.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 15,
+        "duration": 51,
+        "timestamp": "2025-09-25T01:57:59.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-27T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 11,
+        "duration": 70,
+        "timestamp": "2025-09-27T02:21:30.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 5,
+        "duration": 71,
+        "timestamp": "2025-09-27T02:39:30.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 12,
+        "duration": 114,
+        "timestamp": "2025-09-27T02:41:27.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-09-27T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 18,
+        "duration": 118,
+        "timestamp": "2025-09-27T02:05:14.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 16,
+        "duration": 86,
+        "timestamp": "2025-09-27T02:40:35.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 17,
+        "duration": 45,
+        "timestamp": "2025-09-27T02:28:23.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 6,
+        "duration": 36,
+        "timestamp": "2025-09-27T02:44:26.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-01T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 13,
+        "duration": 86,
+        "timestamp": "2025-10-01T02:29:40.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 13,
+        "duration": 58,
+        "timestamp": "2025-10-01T02:01:01.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 17,
+        "duration": 113,
+        "timestamp": "2025-10-01T02:35:58.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 13,
+        "duration": 94,
+        "timestamp": "2025-10-01T02:39:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 5,
+        "duration": 39,
+        "timestamp": "2025-10-02T02:17:17.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 11,
+        "duration": 26,
+        "timestamp": "2025-10-02T02:26:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-02T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 6,
+        "duration": 30,
+        "timestamp": "2025-10-02T02:15:13.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 9,
+        "duration": 112,
+        "timestamp": "2025-10-02T02:42:01.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 6,
+        "duration": 59,
+        "timestamp": "2025-10-02T01:49:27.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 7,
+        "duration": 32,
+        "timestamp": "2025-10-02T02:42:14.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-03T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 12,
+        "duration": 42,
+        "timestamp": "2025-10-03T01:48:49.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 7,
+        "duration": 91,
+        "timestamp": "2025-10-03T02:21:26.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-07T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 8,
+        "duration": 105,
+        "timestamp": "2025-10-07T02:28:36.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 14,
+        "duration": 98,
+        "timestamp": "2025-10-07T02:03:00.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 13,
+        "duration": 46,
+        "timestamp": "2025-10-07T02:32:44.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 5,
+        "duration": 102,
+        "timestamp": "2025-10-07T01:48:04.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-07T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 5,
+        "duration": 56,
+        "timestamp": "2025-10-07T01:45:00.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 9,
+        "duration": 54,
+        "timestamp": "2025-10-07T02:13:58.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 5,
+        "duration": 58,
+        "timestamp": "2025-10-07T02:15:58.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-08T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 15,
+        "duration": 26,
+        "timestamp": "2025-10-08T02:05:00.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 15,
+        "duration": 93,
+        "timestamp": "2025-10-08T01:47:54.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 17,
+        "duration": 32,
+        "timestamp": "2025-10-08T02:26:39.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 15,
+        "duration": 23,
+        "timestamp": "2025-10-08T02:32:38.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "deadlift",
+        "reps": 12,
+        "duration": 68,
+        "timestamp": "2025-10-09T02:05:31.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 7,
+        "duration": 93,
+        "timestamp": "2025-10-09T02:01:58.597039"
+      },
+      {
+        "exercise": "plank",
+        "reps": 10,
+        "duration": 27,
+        "timestamp": "2025-10-09T02:25:41.597039"
+      },
+      {
+        "exercise": "deadlift",
+        "reps": 18,
+        "duration": 101,
+        "timestamp": "2025-10-09T01:54:55.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 11,
+        "duration": 73,
+        "timestamp": "2025-10-09T02:34:05.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-09T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "shoulder press",
+        "reps": 14,
+        "duration": 72,
+        "timestamp": "2025-10-09T02:36:17.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 15,
+        "duration": 23,
+        "timestamp": "2025-10-09T02:21:46.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-10T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 17,
+        "duration": 63,
+        "timestamp": "2025-10-10T02:07:02.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 8,
+        "duration": 70,
+        "timestamp": "2025-10-10T02:40:37.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 7,
+        "duration": 54,
+        "timestamp": "2025-10-10T02:37:30.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 11,
+        "duration": 93,
+        "timestamp": "2025-10-10T02:35:47.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 16,
+        "duration": 98,
+        "timestamp": "2025-10-10T02:01:26.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-11T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 14,
+        "duration": 63,
+        "timestamp": "2025-10-11T02:42:58.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "pull up",
+        "reps": 17,
+        "duration": 25,
+        "timestamp": "2025-10-13T01:49:07.597039"
+      },
+      {
+        "exercise": "shoulder press",
+        "reps": 12,
+        "duration": 32,
+        "timestamp": "2025-10-13T02:21:32.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-13T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 9,
+        "duration": 53,
+        "timestamp": "2025-10-13T02:21:11.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bicep curl",
+        "reps": 8,
+        "duration": 118,
+        "timestamp": "2025-10-14T01:56:10.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 7,
+        "duration": 21,
+        "timestamp": "2025-10-14T01:52:26.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 9,
+        "duration": 97,
+        "timestamp": "2025-10-14T02:26:54.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 5,
+        "duration": 98,
+        "timestamp": "2025-10-14T02:18:22.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-14T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 19,
+        "duration": 66,
+        "timestamp": "2025-10-14T02:01:55.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 17,
+        "duration": 51,
+        "timestamp": "2025-10-14T02:07:26.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 17,
+        "duration": 50,
+        "timestamp": "2025-10-14T01:55:33.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 19,
+        "duration": 88,
+        "timestamp": "2025-10-14T02:42:21.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 16,
+        "duration": 61,
+        "timestamp": "2025-10-14T02:28:26.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-15T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "lunge",
+        "reps": 9,
+        "duration": 20,
+        "timestamp": "2025-10-15T02:12:06.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 17,
+        "duration": 77,
+        "timestamp": "2025-10-15T01:47:08.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-15T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "plank",
+        "reps": 10,
+        "duration": 74,
+        "timestamp": "2025-10-15T01:48:24.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 12,
+        "duration": 64,
+        "timestamp": "2025-10-15T01:51:12.597039"
+      },
+      {
+        "exercise": "bicep curl",
+        "reps": 19,
+        "duration": 120,
+        "timestamp": "2025-10-15T02:22:26.597039"
+      },
+      {
+        "exercise": "squat",
+        "reps": 9,
+        "duration": 29,
+        "timestamp": "2025-10-15T02:16:21.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 18,
+        "duration": 86,
+        "timestamp": "2025-10-15T02:18:14.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-19T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "bench press",
+        "reps": 7,
+        "duration": 105,
+        "timestamp": "2025-10-19T02:36:20.597039"
+      },
+      {
+        "exercise": "bench press",
+        "reps": 18,
+        "duration": 89,
+        "timestamp": "2025-10-19T01:48:34.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-20T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 19,
+        "duration": 95,
+        "timestamp": "2025-10-20T02:29:49.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 11,
+        "duration": 47,
+        "timestamp": "2025-10-20T02:08:03.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-21T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 19,
+        "duration": 50,
+        "timestamp": "2025-10-21T02:17:49.597039"
+      },
+      {
+        "exercise": "lunge",
+        "reps": 14,
+        "duration": 100,
+        "timestamp": "2025-10-21T02:01:09.597039"
+      },
+      {
+        "exercise": "push up",
+        "reps": 20,
+        "duration": 110,
+        "timestamp": "2025-10-21T02:25:49.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-22T01:44:59.597039",
+    "sets": [
+      {
+        "exercise": "squat",
+        "reps": 10,
+        "duration": 60,
+        "timestamp": "2025-10-22T01:51:58.597039"
+      },
+      {
+        "exercise": "sit up",
+        "reps": 17,
+        "duration": 84,
+        "timestamp": "2025-10-22T02:22:42.597039"
+      },
+      {
+        "exercise": "pull up",
+        "reps": 9,
+        "duration": 90,
+        "timestamp": "2025-10-22T02:39:55.597039"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-22T18:41:25.251956",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 3,
+        "duration": 183,
+        "timestamp": "2025-10-23T02:38:21.294393"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-22T18:44:37.996387",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 2,
+        "duration": 40,
+        "timestamp": "2025-10-23T02:43:57.736974"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-24T02:16:45.528608",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 6,
+        "duration": 169,
+        "timestamp": "2025-10-24T02:13:55.681761"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-24T02:19:24.502803",
+    "sets": [
+      {
+        "exercise": "push up",
+        "reps": 2,
+        "duration": 143,
+        "timestamp": "2025-10-24T02:17:01.485134"
+      }
+    ]
+  },
+  {
+    "date": "2025-10-24T09:05:38.653500",
+    "sets": [
+      {
+        "exercise": "hip thrust",
+        "reps": 8,
+        "duration": 183,
+        "timestamp": "2025-10-24T09:02:35.122171"
+      }
+    ]
+  }
+]

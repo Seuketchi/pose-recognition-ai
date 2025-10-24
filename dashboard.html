@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Workout Dashboard — Enhanced</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <style>
+    :root{
+      --bg:#081226; --panel:#071726; --muted:#9aa7b7; --accent1:#7c3aed; --accent2:#06b6d4;
+      --glass:rgba(255,255,255,0.03); --radius:14px; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      color-scheme:dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#041022);color:#e6eef8}
+    .app{max-width:1400px;margin:28px auto;padding:22px;display:grid;grid-template-columns:1fr;gap:18px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:grid;place-items:center;font-weight:700;font-size:20px}
+    h1{font-size:20px;margin:0}
+    .subtitle{color:var(--muted);font-size:13px;margin-top:2px}
+
+    .controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.08);padding:8px 16px;border-radius:10px;color:inherit;cursor:pointer;transition:all .2s}
+    .btn:hover{background:rgba(255,255,255,0.05);transform:translateY(-2px)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent1),var(--accent2));border:0;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    .grid{display:grid;grid-template-columns:1fr 400px;gap:18px;align-items:start}
+
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:var(--radius);padding:16px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);transition:transform .18s ease,box-shadow .18s ease}
+    .panel:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(2,6,23,0.8)}
+    .muted{color:var(--muted);font-size:13px}
+
+    .sessions{display:flex;flex-direction:column;gap:12px;max-height:520px;overflow:auto;padding-right:6px}
+    .sessions::-webkit-scrollbar{width:6px}
+    .sessions::-webkit-scrollbar-track{background:rgba(255,255,255,0.02);border-radius:10px}
+    .sessions::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:10px}
+    
+    .session-card{display:flex;justify-content:space-between;gap:12px;padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);transition:all .2s}
+    .session-card:hover{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08)}
+    .session-left{min-width:0}
+    .session-date{font-weight:600;font-size:14px}
+    .session-sets{color:var(--muted);font-size:12px;margin-top:4px}
+    .set-row{display:flex;justify-content:space-between;gap:12px;margin-top:6px;font-size:13px}
+
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .stat{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));text-align:center;border:1px solid rgba(255,255,255,0.03)}
+    .value{font-weight:700;font-size:22px;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .label{color:var(--muted);font-size:12px;margin-top:4px}
+
+    /* Personal Records */
+    .pr-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+    .pr-item{display:flex;justify-content:space-between;padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+    .pr-item:hover{background:rgba(255,255,255,0.04)}
+    .pr-exercise{font-weight:600;font-size:13px}
+    .pr-reps{color:var(--accent1);font-weight:700}
+
+    /* Heatmap */
+    .heat-wrap {display:flex;gap:12px;align-items:flex-start;overflow-x:auto;overflow-y:hidden;padding-bottom:4px;height:120px;box-sizing:border-box}
+    .heat-week-labels {flex:0 0 auto;font-size:11px;line-height:1.3;color:var(--muted);user-select:none}
+    .heat-container {display:flex;flex-direction:column;overflow:hidden}
+    .heat-months {display:grid;grid-template-columns:repeat(53,minmax(10px,1fr));font-size:10px;color:rgba(255,255,255,0.4);margin-left:2px;height:18px;align-items:center}
+    .heat-grid {display:grid;grid-template-columns:repeat(53,minmax(10px,1fr));grid-template-rows:repeat(7,10px);gap:3px;width:max-content;height:fit-content;margin-top:4px}
+    .heat-cell {width:10px;height:10px;border-radius:2px;transition:transform .12s ease,opacity .12s ease}
+    .heat-cell:hover {transform:scale(1.8);z-index:5;position:relative;box-shadow:0 4px 12px rgba(0,0,0,0.5)}
+    .heat-0 {background:rgba(255,255,255,0.04)}
+    .heat-1 {background:rgba(124,58,237,0.2)}
+    .heat-2 {background:rgba(124,58,237,0.4)}
+    .heat-3 {background:rgba(124,58,237,0.6)}
+    .heat-4 {background:linear-gradient(135deg,rgba(124,58,237,0.8),rgba(6,182,212,0.8))}
+
+    .chip{padding:6px 12px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-size:12px;display:inline-block;margin:4px}
+    .chip.active{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#04111a;border:0;font-weight:600}
+
+    /* Real-time status indicator */
+    .status-indicator{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+
+    /* Progress bars */
+    .progress-bar{height:6px;background:rgba(255,255,255,0.05);border-radius:999px;overflow:hidden;margin-top:6px}
+    .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));border-radius:999px;transition:width .3s ease}
+
+    @media (max-width:1024px){.grid{grid-template-columns:1fr}}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}.sidebar{order:2}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">🏋️</div>
+        <div>
+          <h1>AI Workout Dashboard</h1>
+          <div class="subtitle">Smart analytics · muscle tracking · AI insights</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="status-indicator">
+          <div class="status-dot"></div>
+          <span class="muted" id="loadedInfo">Ready</span>
+        </div>
+        <button id="loadBtn" class="btn primary">Load Data</button>
+        <input id="fileInput" type="file" accept="application/json" style="display:none">
+        <button id="refreshBtn" class="btn ghost">↻ Refresh</button>
+        <button id="shareBtn" class="btn">📸 Export</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <!-- Quick Stats Overview -->
+        <section class="panel">
+          <div class="muted">Overview</div>
+          <div class="stats" style="margin-top:12px">
+            <div class="stat">
+              <div class="value" id="totalSessions">—</div>
+              <div class="label">Total Sessions</div>
+            </div>
+            <div class="stat">
+              <div class="value" id="totalSets">—</div>
+              <div class="label">Total Sets</div>
+            </div>
+            <div class="stat">
+              <div class="value" id="totalReps">—</div>
+              <div class="label">Total Reps</div>
+            </div>
+          </div>
+          <div style="margin-top:12px">
+            <div class="muted">This Week's Progress</div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="weekProgress" style="width:0%"></div>
+            </div>
+            <div class="muted" style="margin-top:4px" id="weekProgressText">0% of weekly goal</div>
+          </div>
+        </section>
+
+        <!-- Sessions History -->
+        <section class="panel" style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="muted">Recent Sessions</div>
+            <div class="muted" id="sessionCount">—</div>
+          </div>
+          <div class="sessions" id="sessions"></div>
+        </section>
+
+        <!-- Volume Chart -->
+        <section class="panel" style="margin-top:12px">
+          <div style="display:flex;gap:12px;align-items:center;justify-content:space-between">
+            <div class="muted">Volume Trend</div>
+            <div class="muted">Weekly aggregation</div>
+          </div>
+          <canvas id="volumeChart" style="height:180px;margin-top:12px"></canvas>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <!-- Muscle Distribution -->
+        <div class="panel">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="muted">Muscle Group Focus</div>
+            <div class="muted">By total reps</div>
+          </div>
+          <div style="margin-top:12px;height:200px">
+            <canvas id="muscleChart" style="height:100%"></canvas>
+          </div>
+          <div style="margin-top:12px" id="muscleLegend" class="muted"></div>
+        </div>
+
+        <!-- Personal Records -->
+        <div class="panel" style="margin-top:12px">
+          <div class="muted">🏆 Personal Records</div>
+          <div class="pr-list" id="prList"></div>
+        </div>
+
+        <!-- Workout Heatmap -->
+        <div class="panel" style="margin-top:12px">
+          <div class="muted">Activity Heatmap</div>
+          <div style="margin-top:10px" class="heat-wrap">
+            <div class="heat-week-labels">Sun<br>Mon<br>Tue<br>Wed<br>Thu<br>Fri<br>Sat</div>
+            <div class="heat-container">
+              <div class="heat-months" id="heatMonths"></div>
+              <div id="heatmap" class="heat-grid"></div>
+            </div>
+          </div>
+          <div style="margin-top:10px;display:flex;justify-content:space-between">
+            <div class="muted">Current Streak: <strong id="streak">0</strong> days</div>
+            <div class="muted">Best: <strong id="bestStreak">0</strong> days</div>
+          </div>
+        </div>
+
+        <!-- Smart Insights -->
+        <div class="panel" style="margin-top:12px">
+          <div class="muted">🧠 AI Insights</div>
+          <div id="insights" style="margin-top:10px;font-size:13px;line-height:1.6"></div>
+        </div>
+
+        <!-- Badges -->
+        <div class="panel" style="margin-top:12px">
+          <div class="muted">Achievements</div>
+          <div style="margin-top:8px" id="badges"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+  const JSON_FILE = 'workout_history.json';
+  const $ = s => document.querySelector(s);
+  let rawData = [];
+  let charts = {};
+  let muscleChart = null;
+
+  $('#loadBtn').addEventListener('click', ()=> $('#fileInput').click());
+  $('#fileInput').addEventListener('change', async (e)=>{
+    const f = e.target.files[0];
+    if(!f) return;
+    try{
+      const text = await f.text();
+      rawData = JSON.parse(text);
+      initAfterLoad();
+    } catch(err){
+      console.error('Invalid JSON', err);
+      alert('Invalid JSON file');
+    }
+  });
+
+  async function tryFetch(){
+    try{
+      const res = await fetch(JSON_FILE + '?_=' + Date.now());
+      if(!res.ok) throw new Error('fetch failed');
+      rawData = await res.json();
+      initAfterLoad();
+    } catch(err){
+      console.warn('Fetch failed, use Load button', err);
+      $('#loadedInfo').textContent = 'No data — use Load button';
+    }
+  }
+
+  function initAfterLoad(){
+    $('#loadedInfo').textContent = `${rawData.length} sessions loaded`;
+    render();
+  }
+
+  function summarize(data){
+    const s = {sessions:data.length, sets:0, reps:0};
+    for(const session of data){
+      const sets = session.sets || [];
+      s.sets += sets.length;
+      for(const st of sets) s.reps += (st.reps||0);
+    }
+    return s;
+  }
+
+  function flattenSets(data){
+    const out = [];
+    for(const session of data){
+      for(const st of (session.sets||[])){
+        out.push({
+          sessionDate: session.date||null,
+          exercise: st.exercise||'unknown',
+          reps: st.reps||0,
+          duration: st.duration||0
+        });
+      }
+    }
+    return out;
+  }
+
+  function render(){
+    renderSummary();
+    renderSessions();
+    renderCharts();
+    renderMuscleChart();
+    renderPRs();
+    renderHeatmap();
+    renderInsights();
+    renderBadges();
+    renderWeekProgress();
+  }
+
+  function renderSummary(){
+    const s = summarize(rawData);
+    $('#totalSessions').textContent = s.sessions;
+    $('#totalSets').textContent = s.sets;
+    $('#totalReps').textContent = s.reps;
+    $('#sessionCount').textContent = `${s.sessions} total`;
+  }
+
+  function renderSessions(){
+    const el = $('#sessions');
+    el.innerHTML = '';
+    const slice = rawData.slice(-100).reverse();
+    for(const session of slice){
+      const card = document.createElement('div');
+      card.className='session-card';
+      
+      const left = document.createElement('div');
+      left.className='session-left';
+      
+      const date = document.createElement('div');
+      date.className='session-date';
+      date.textContent = session.date ? new Date(session.date).toLocaleString() : 'Session';
+      left.appendChild(date);
+      
+      const meta = document.createElement('div');
+      meta.className='session-sets';
+      meta.textContent = `${(session.sets||[]).length} sets`;
+      left.appendChild(meta);
+
+      const right = document.createElement('div');
+      right.style.minWidth='140px';
+      (session.sets||[]).forEach(st=>{
+        const row = document.createElement('div');
+        row.className='set-row';
+        const ex = document.createElement('div');
+        ex.textContent = st.exercise;
+        ex.style.fontWeight='600';
+        const repInfo = document.createElement('div');
+        repInfo.className='muted';
+        repInfo.textContent = `${st.reps} reps · ${st.duration||0}s`;
+        row.appendChild(ex);
+        row.appendChild(repInfo);
+        right.appendChild(row);
+      });
+
+      card.appendChild(left);
+      card.appendChild(right);
+      el.appendChild(card);
+    }
+  }
+
+  function toWeeklyPoints(data){
+    const map = {};
+    for(const session of data){
+      const d = session.date ? new Date(session.date) : new Date();
+      const wk = getWeekKey(d);
+      map[wk] = (map[wk]||0) + (session.sets||[]).reduce((a,b)=>a+(b.reps||0),0);
+    }
+    const keys = Object.keys(map).sort();
+    return { labels: keys, values: keys.map(k=>map[k]) };
+  }
+
+  function getWeekKey(d){
+    const y = d.getFullYear();
+    const week = Math.floor((d - new Date(y,0,1))/(7*24*3600*1000));
+    return `${y}-W${week}`;
+  }
+
+  function renderCharts(){
+    const weekly = toWeeklyPoints(rawData);
+    renderLine('volumeChart', weekly.labels, weekly.values);
+  }
+
+  function renderLine(canvasId, labels, values){
+    const ctx = document.getElementById(canvasId).getContext('2d');
+    if(charts[canvasId]) charts[canvasId].destroy();
+    charts[canvasId] = new Chart(ctx, {
+      type:'line',
+      data:{
+        labels,
+        datasets:[{
+          label:'Reps',
+          data:values,
+          tension:0.3,
+          fill:true,
+          backgroundColor:'rgba(124,58,237,0.1)',
+          borderColor:'rgba(124,58,237,0.8)',
+          borderWidth:2,
+          pointBackgroundColor:'rgba(124,58,237,1)',
+          pointRadius:3
+        }]
+      },
+      options:{
+        plugins:{legend:{display:false}},
+        scales:{
+          x:{display:true,grid:{color:'rgba(255,255,255,0.05)'}},
+          y:{display:true,grid:{color:'rgba(255,255,255,0.05)'}}
+        }
+      }
+    });
+  }
+
+  const EX_TO_MUSCLE = {
+    'bench_press':'Chest','benchpress':'Chest','bench':'Chest',
+    'push up':'Chest','push-up':'Chest','pushup':'Chest',
+    'deadlift':'Back','dead lift':'Back',
+    'pull up':'Back','pull-up':'Back','pullup':'Back',
+    'row':'Back','barbell row':'Back',
+    'squat':'Legs','front squat':'Legs','back squat':'Legs',
+    'lunge':'Legs','lunges':'Legs',
+    'overhead press':'Shoulders','shoulder press':'Shoulders',
+    'bicep curl':'Arms','biceps curl':'Arms','curl':'Arms',
+    'tricep extension':'Arms','triceps extension':'Arms',
+    'plank':'Core','crunch':'Core','sit up':'Core',
+    'dip':'Chest','pushdown':'Arms'
+  };
+
+  function normalizeExerciseName(name){
+    if(!name) return '';
+    return String(name).toLowerCase().trim().replace(/[_\-]/g,' ').replace(/\s+/g,' ');
+  }
+
+  function computeMuscleDistribution(){
+    const counts = {};
+    const sets = flattenSets(rawData);
+    for(const s of sets){
+      const ex = normalizeExerciseName(s.exercise);
+      const muscle = EX_TO_MUSCLE[ex] || 'Other';
+      counts[muscle] = (counts[muscle]||0) + (s.reps || 0);
+    }
+    return counts;
+  }
+
+  function renderMuscleChart(){
+    const counts = computeMuscleDistribution();
+    const labels = Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+    if(!labels.length){
+      if(muscleChart) muscleChart.destroy();
+      $('#muscleLegend').textContent = 'No data';
+      return;
+    }
+    const data = labels.map(l=>counts[l]);
+
+    const ctx = $('#muscleChart').getContext('2d');
+    if(muscleChart) muscleChart.destroy();
+
+    const palette = [
+      'rgba(124,58,237,0.95)','rgba(6,182,212,0.95)','rgba(34,197,94,0.95)',
+      'rgba(249,115,22,0.95)','rgba(239,68,68,0.95)','rgba(99,102,241,0.95)'
+    ];
+    const bg = labels.map((_,i)=> palette[i % palette.length]);
+    
+    muscleChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: { labels, datasets: [{ data, backgroundColor: bg, borderWidth: 0 }] },
+      options: {
+        plugins: { legend: { display: false } },
+        cutout: '60%',
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+    const total = data.reduce((a,b)=>a+b,0);
+    const legendEl = $('#muscleLegend');
+    legendEl.innerHTML = labels.map((l,i)=>{
+      const pct = total ? Math.round((data[i]/total)*100) : 0;
+      return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="width:10px;height:10px;border-radius:2px;background:${bg[i]}"></div>
+        <div style="flex:1;font-size:12px">${l}</div>
+        <div style="min-width:36px;text-align:right;font-weight:600">${pct}%</div>
+      </div>`;
+    }).join('');
+  }
+
+  function computePRs(sets){
+    const prs = {};
+    for(const s of sets){
+      if(!prs[s.exercise] || s.reps > prs[s.exercise].reps){
+        prs[s.exercise] = {reps: s.reps, date: s.sessionDate};
+      }
+    }
+    return prs;
+  }
+
+  function renderPRs(){
+    const sets = flattenSets(rawData);
+    const prs = computePRs(sets);
+    const el = $('#prList');
+    el.innerHTML = '';
+    
+    const entries = Object.entries(prs).sort((a,b)=>b[1].reps-a[1].reps).slice(0,5);
+    if(!entries.length){
+      el.innerHTML = '<div class="muted">No PRs yet</div>';
+      return;
+    }
+    
+    entries.forEach(([ex, data])=>{
+      const item = document.createElement('div');
+      item.className = 'pr-item';
+      item.innerHTML = `
+        <div class="pr-exercise">${ex}</div>
+        <div class="pr-reps">${data.reps} reps</div>
+      `;
+      el.appendChild(item);
+    });
+  }
+
+  function buildHeatmapCols(sessions){
+    const counts = {};
+    sessions.forEach(s=>{
+      if(!s.date) return;
+      const key = new Date(s.date).toISOString().slice(0,10);
+      counts[key] = (counts[key]||0) + 1;
+    });
+
+    const end = new Date();
+    const lastSunday = new Date(end);
+    lastSunday.setDate(end.getDate() - end.getDay());
+
+    const cols = [];
+    for(let w=52; w>=0; w--){
+      const col = [];
+      for(let d=0; d<7; d++){
+        const day = new Date(lastSunday);
+        day.setDate(lastSunday.getDate() - (w*7) + d);
+        const key = day.toISOString().slice(0,10);
+        col.push({ date: key, count: counts[key] || 0 });
+      }
+      cols.push(col);
+    }
+    return cols;
+  }
+
+  function renderHeatmap(){
+    const weeks = buildHeatmapCols(rawData);
+    const container = $('#heatmap');
+    container.innerHTML = '';
+    
+    weeks.forEach(col=>{
+      col.forEach(c=>{
+        const cell = document.createElement('div');
+        const count = c.count;
+        let cls = 'heat-cell heat-0';
+        if(count>=1 && count<2) cls='heat-cell heat-1';
+        if(count>=2 && count<4) cls='heat-cell heat-2';
+        if(count>=4 && count<6) cls='heat-cell heat-3';
+        if(count>=6) cls='heat-cell heat-4';
+        cell.className = cls;
+        cell.title = `${c.date}: ${count} session(s)`;
+        container.appendChild(cell);
+      });
+    });
+    
+    renderHeatmapMonths();
+    calcStreaks();
+  }
+
+  function renderHeatmapMonths(){
+    const monthsEl = $('#heatMonths');
+    monthsEl.innerHTML = '';
+    const start = new Date();
+    start.setDate(start.getDate() - 52 * 7);
+
+    for(let i=0; i<53; i++){
+      const d = new Date(start);
+      d.setDate(d.getDate() + i * 7);
+      const month = d.toLocaleString('default', { month: 'short' });
+      const nextD = new Date(d);
+      nextD.setDate(d.getDate() + 7);
+      const nextMonth = nextD.toLocaleString('default', { month: 'short' });
+
+      const slot = document.createElement('div');
+      if(i === 0 || month !== nextMonth){
+        slot.textContent = month;
+      }
+      monthsEl.appendChild(slot);
+    }
+  }
+
+  function calcStreaks(){
+    const days = new Set(rawData.map(s=> s.date? s.date.slice(0,10): null).filter(Boolean));
+    const today = new Date();
+    let current = 0;
+    for(let i=0;;i++){
+      const d = new Date();
+      d.setDate(today.getDate()-i);
+      const key = d.toISOString().slice(0,10);
+      if(days.has(key)) current++; else break;
+    }
+    
+    let best = current;
+    let tempStreak = 0;
+    const allDays = Array.from(days).sort();
+    for(let i=0; i<allDays.length; i++){
+      if(i === 0 || isConsecutive(allDays[i-1], allDays[i])){
+        tempStreak++;
+        best = Math.max(best, tempStreak);
+      } else {
+        tempStreak = 1;
+      }
+    }
+    
+    $('#streak').textContent = current;
+    $('#bestStreak').textContent = best;
+  }
+
+  function isConsecutive(d1, d2){
+    const date1 = new Date(d1);
+    const date2 = new Date(d2);
+    return (date2 - date1) === 24*60*60*1000;
+  }
+
+  function renderWeekProgress(){
+    const today = new Date();
+    const weekStart = new Date(today);
+    weekStart.setDate(today.getDate() - today.getDay());
+    
+    const thisWeek = rawData.filter(s=>{
+      if(!s.date) return false;
+      const d = new Date(s.date);
+      return d >= weekStart;
+    });
+    
+    const weekReps = thisWeek.reduce((sum, s)=>{
+      return sum + (s.sets||[]).reduce((a,b)=>a+(b.reps||0),0);
+    }, 0);
+    
+    const weeklyGoal = 200; // Configurable
+    const progress = Math.min(100, (weekReps / weeklyGoal) * 100);
+    
+    $('#weekProgress').style.width = progress + '%';
+    $('#weekProgressText').textContent = `${Math.round(progress)}% of weekly goal (${weekReps}/${weeklyGoal} reps)`;
+  }
+
+  function renderInsights(){
+    const sets = flattenSets(rawData);
+    if(!sets.length){
+      $('#insights').innerHTML = '<div class="muted">No data for insights</div>';
+      return;
+    }
+    
+    const fatigue = detectFatigue();
+    const rest = recommendRest();
+    const balance = analyzeBalance();
+    const prediction = predictNext();
+    const recovery = computeRecoveryScore(fatigue, rest);
+    
+    const html = `
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)">
+          <div style="font-weight:600;margin-bottom:4px">🔮 Prediction</div>
+          <div class="muted">${prediction}</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)">
+          <div style="font-weight:600;margin-bottom:4px">⚠️ Fatigue Level</div>
+          <div class="muted">${fatigue}</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)">
+          <div style="font-weight:600;margin-bottom:4px">🛌 Rest Recommendation</div>
+          <div class="muted">${rest}</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)">
+          <div style="font-weight:600;margin-bottom:4px">💪 Muscle Balance</div>
+          <div class="muted">${balance}</div>
+        </div>
+        <div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.03)">
+          <div style="font-weight:600;margin-bottom:4px">🧘 Recovery Score</div>
+          <div style="font-size:24px;font-weight:700;background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent">${recovery}/100</div>
+          <div class="progress-bar" style="margin-top:6px">
+            <div class="progress-fill" style="width:${recovery}%"></div>
+          </div>
+        </div>
+      </div>
+    `;
+    $('#insights').innerHTML = html;
+  }
+
+  function detectFatigue(){
+    const daily = toDailyPoints(rawData);
+    if(daily.values.length < 6) return 'Insufficient data';
+    const last3 = daily.values.slice(-3).reduce((a,b)=>a+b,0) / 3;
+    const prev3 = daily.values.slice(-6,-3).reduce((a,b)=>a+b,0) / 3;
+    const drop = ((prev3 - last3) / prev3) * 100;
+    if(drop > 20) return `High (${drop.toFixed(1)}% performance drop)`;
+    if(drop > 10) return `Moderate (${drop.toFixed(1)}% drop)`;
+    if(drop > 0) return `Low (${drop.toFixed(1)}% drop)`;
+    return 'None detected - performing well';
+  }
+
+  function recommendRest(){
+    const daily = toDailyPoints(rawData);
+    if(daily.values.length < 6) return 'Need more workout data';
+    const last3 = daily.values.slice(-3).reduce((a,b)=>a+b,0) / 3;
+    const prev3 = daily.values.slice(-6,-3).reduce((a,b)=>a+b,0) / 3;
+    const diff = ((last3 - prev3)/prev3) * 100;
+    if(diff < -20) return '⚠️ Take 2-3 days rest';
+    if(diff < -10) return 'Consider 1-2 days lighter training';
+    if(diff > 15) return '✅ Great progress - maintain current schedule';
+    return 'Stable - keep current routine';
+  }
+
+  function analyzeBalance(){
+    const counts = computeMuscleDistribution();
+    const total = Object.values(counts).reduce((a,b)=>a+b,0);
+    if(!total) return 'No exercises logged';
+    const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+    const avg = total / entries.length;
+    const under = entries.filter(e=> e[1] < avg * 0.4);
+    if(under.length > 2) return `⚠️ ${under.slice(0,2).map(u=>u[0]).join(', ')} need attention`;
+    if(under.length > 0) return `Consider more ${under[0][0]} exercises`;
+    return '✅ Well balanced training';
+  }
+
+  function predictNext(){
+    const daily = toDailyPoints(rawData);
+    if(daily.values.length < 5) return 'Need more data for prediction';
+    const n = daily.values.length;
+    const x = daily.values.map((_,i)=>i);
+    const y = daily.values;
+    const meanX = x.reduce((a,b)=>a+b,0)/n;
+    const meanY = y.reduce((a,b)=>a+b,0)/n;
+    const num = x.map((xi,i)=> (xi-meanX)*(y[i]-meanY)).reduce((a,b)=>a+b,0);
+    const den = x.map(xi=> (xi-meanX)*(xi-meanX)).reduce((a,b)=>a+b,0) || 1;
+    const slope = num/den;
+    const intercept = meanY - slope * meanX;
+    const next = intercept + slope * n;
+    const trend = slope > 0 ? '📈 trending up' : slope < 0 ? '📉 trending down' : '➡️ stable';
+    return `Next session: ~${Math.round(next)} reps (${trend})`;
+  }
+
+  function computeRecoveryScore(fatigueText, restText){
+    let score = 100;
+    if(fatigueText.includes('High')) score -= 30;
+    else if(fatigueText.includes('Moderate')) score -= 15;
+    else if(fatigueText.includes('Low')) score -= 5;
+    if(restText.includes('2-3 days')) score -= 25;
+    else if(restText.includes('lighter')) score -= 10;
+    if(restText.includes('Great progress')) score = Math.min(100, score + 10);
+    return Math.max(0, Math.min(100, score));
+  }
+
+  function toDailyPoints(data){
+    const map = {};
+    for(const s of data){
+      const key = s.date ? s.date.slice(0,10) : new Date().toISOString().slice(0,10);
+      map[key] = (map[key]||0) + (s.sets||[]).reduce((a,b)=>a+(b.reps||0),0);
+    }
+    const keys = Object.keys(map).sort();
+    return { labels: keys, values: keys.map(k=>map[k]) };
+  }
+
+  function awardBadges(){
+    const badges = JSON.parse(localStorage.getItem('wg_badges')||'{}');
+    const sets = flattenSets(rawData);
+    const streak = parseInt($('#streak').textContent);
+    
+    if(streak >= 7) badges['7_day_streak'] = true;
+    if(streak >= 30) badges['30_day_streak'] = true;
+    if(streak >= 100) badges['100_day_streak'] = true;
+    
+    const totalReps = sets.reduce((s,x)=>s + x.reps, 0);
+    if(totalReps >= 500) badges['500_reps'] = true;
+    if(totalReps >= 1000) badges['1000_reps'] = true;
+    if(totalReps >= 5000) badges['5000_reps'] = true;
+    
+    const prs = computePRs(sets);
+    if(Object.keys(prs).length > 0) badges['first_pr'] = true;
+    if(Object.keys(prs).length >= 5) badges['5_prs'] = true;
+    
+    if(rawData.length >= 10) badges['10_sessions'] = true;
+    if(rawData.length >= 50) badges['50_sessions'] = true;
+    
+    localStorage.setItem('wg_badges', JSON.stringify(badges));
+    return badges;
+  }
+
+  function renderBadges(){
+    const badges = awardBadges();
+    const el = $('#badges');
+    el.innerHTML = '';
+    
+    if(Object.keys(badges).length === 0){
+      el.innerHTML = '<div class="muted">Complete workouts to earn badges</div>';
+      return;
+    }
+    
+    Object.keys(badges).forEach(k=>{
+      const b = document.createElement('div');
+      b.className='chip active';
+      b.textContent = badgeLabel(k);
+      el.appendChild(b);
+    });
+  }
+
+  function badgeLabel(k){
+    const map = {
+      '7_day_streak':'🔥 7-Day Streak',
+      '30_day_streak':'🔥 30-Day Streak',
+      '100_day_streak':'🔥 100-Day Streak',
+      'first_pr':'🏆 First PR',
+      '5_prs':'🏆 5 PRs',
+      '500_reps':'💪 500 Reps',
+      '1000_reps':'💪 1000 Reps',
+      '5000_reps':'💪 5000 Reps',
+      '10_sessions':'📊 10 Sessions',
+      '50_sessions':'📊 50 Sessions'
+    };
+    return map[k] || k;
+  }
+
+  $('#shareBtn').addEventListener('click', ()=>{
+    html2canvas(document.querySelector('.app'), {scale:2}).then(canvas=>{
+      canvas.toBlob(blob=>{
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `workout_dashboard_${new Date().toISOString().slice(0,10)}.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+    });
+  });
+
+  $('#refreshBtn').addEventListener('click', ()=> tryFetch());
+
+  tryFetch();
+  </script>
+</body>
+</html>
