@@ -1,3 +1,22 @@
+"""
+AI-Powered Gym Workout Tracker
+
+Full-featured workout tracking application with real-time exercise classification,
+rep counting, session management, and voice coaching.
+
+Uses the pre-trained Gym-Workout-Classifier-SigLIP2 model from HuggingFace.
+Model: https://huggingface.co/prithivMLmods/Gym-Workout-Classifier-SigLIP2
+DOI: 10.57967/hf/5391
+
+See docs/MODEL_ATTRIBUTION.md for model details and attribution.
+"""
+
+import sys
+from pathlib import Path
+
+# Add parent directory to path for src imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import cv2
 import numpy as np
 from transformers import AutoImageProcessor, AutoModelForImageClassification
@@ -10,7 +29,6 @@ from collections import deque
 import threading
 import queue
 import logging
-from pathlib import Path
 import warnings
 import time
 import atexit

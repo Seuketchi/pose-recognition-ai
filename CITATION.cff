@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Jadman"
+    given-names: "Tristan"
+  - family-names: "Cruza"
+    given-names: "Ian James"
+title: "Exercise Classification Using Vision-Language Models"
+year: 2025
+url: "https://github.com/Seuketchi/pose-recognition-ai"
